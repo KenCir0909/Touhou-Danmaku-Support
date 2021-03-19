@@ -1,6 +1,6 @@
 require('dotenv').config();
 const { Client, Intents, MessageEmbed } = require('discord.js');
-const client = new Client({ ws: { intents: Intents.ALL } });
+const client = new Client({ ws: { intents: Intents.ALL }, fetchAllMembers: true });
 
 client.once('ready', () => {
     console.log(`Logged in as ${client.user.tag}`);
